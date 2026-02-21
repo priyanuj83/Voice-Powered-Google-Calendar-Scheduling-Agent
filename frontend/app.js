@@ -3,7 +3,7 @@
  * Web Speech API (STT + TTS), chat UI, API calls to backend with logging.
  */
 
-const API_URL = "http://localhost:8000"; // Change to deployed URL for production
+const API_URL = "https://voice-powered-google-calendar-scheduling.onrender.com"; // Change to deployed URL for production
 
 let messages = [];
 let isListening = false;
