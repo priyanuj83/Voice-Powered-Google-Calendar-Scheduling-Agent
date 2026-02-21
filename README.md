@@ -102,7 +102,7 @@ The app works end-to-end: you speak to schedule a meeting, and the event appears
 
 ---
 
-## Logs and demo video
+## Backend Logs
 
 With the backend running locally, watch the terminal for `POST /api/chat`, `SCHEDULE block extracted`, and `Calendar event created successfully` to confirm an event was created.
 
