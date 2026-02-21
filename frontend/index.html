@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Scheduling Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Voice Scheduling Assistant</h1>
+      <p class="subtitle">Schedule meetings with your voice</p>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area" id="chatArea">
+      <!-- Chat bubbles will be inserted here dynamically -->
+      <!-- Assistant bubble: <div class="message assistant"><p>text</p></div> -->
+      <!-- User bubble: <div class="message user"><p>text</p></div> -->
+    </div>
+
+    <!-- Success Banner (hidden by default) -->
+    <div class="success-banner" id="successBanner" style="display:none">
+      <span id="successBannerText">✓ Event created!</span>
+      <a id="eventLink" href="#" target="_blank">View in Calendar</a>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="mic-btn" id="micBtn">🎤</button>
+      <p class="status" id="status">Click the microphone to start</p>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
