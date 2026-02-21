@@ -86,9 +86,24 @@ The assistant talks to **Google Calendar** via the **Google Calendar API (v3)** 
 
 ---
 
-## Screenshots, logs, or demo video
+## Screenshots
 
-- **Screenshots:** Add screenshots (e.g. welcome screen, "How can I help you?", meeting confirmation, Google Calendar with the new event) to a folder such as `docs/screenshots/` or `assets/` and link them here.
+The app works end-to-end: you speak to schedule a meeting, and the event appears on Google Calendar.
+
+| Voice assistant chat flow | Google Calendar — event created |
+|---------------------------|----------------------------------|
+| <img src="docs/screenshots/voice-chat-scheduling.png" width="400" alt="Voice chat: scheduling a meeting" /> | <img src="docs/screenshots/calendar-event-created.png" width="400" alt="Google Calendar with Project discussion event" /> |
+
+*Left:* Say your name, request a meeting (e.g. "February 22, 8 AM to 10 AM"), provide a title ("Project discussion"), and confirm. *Right:* The event appears on your calendar with description "Meeting scheduled by Voice Assistant".
+
+**Calendar day view (before/context):**
+
+![Calendar day view](docs/screenshots/calendar-day-view.png)
+
+---
+
+## Logs and demo video
+
 - **Logs:** With the backend running locally, watch the terminal for `POST /api/chat`, `SCHEDULE block extracted`, and `Calendar event created successfully` to confirm an event was created.
 - **Demo video:** Record a short [Loom](https://www.loom.com) (or similar) walkthrough: open app → say name → "How can I help you?" → schedule a meeting or add an event → confirm → show the event in Google Calendar. Paste the link here:
 
