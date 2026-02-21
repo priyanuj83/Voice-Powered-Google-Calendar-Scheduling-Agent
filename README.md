@@ -100,7 +100,7 @@ The assistant talks to **Google Calendar** via the **Google Calendar API (v3)** 
 
 - **Frontend:** Vanilla HTML/CSS/JS, Web Speech API (STT + TTS)
 - **Backend:** Python, FastAPI
-- **LLM:** Claude Haiku (Anthropic API)
+- **LLM:** Claude Haiku 4.5 (Anthropic API)
 - **Calendar:** Google Calendar API (Service Account)
 - **Hosting:** e.g. Render (backend), static host for frontend
 
