@@ -8,10 +8,10 @@ A real-time voice-powered scheduling agent that books Google Calendar events thr
 
 ### Live demo
 
-**[Live app](https://your-deployed-url.onrender.com)** — Replace with your actual deployed URL (e.g. Render, Vercel, or your backend + frontend URLs).
+**[Live app](https://voice-powered-google-calendar-scheduling-wzeg.onrender.com)** — Voice scheduling assistant (frontend + backend on Render).
 
-- **Backend:** e.g. `https://your-app.onrender.com`
-- **Frontend:** Set `API_URL` in `frontend/app.js` to your backend URL, then host the `frontend/` folder (e.g. on Render, Vercel, or GitHub Pages), or open `frontend/index.html` and point `API_URL` to the deployed backend.
+- **Frontend:** [https://voice-powered-google-calendar-scheduling-wzeg.onrender.com](https://voice-powered-google-calendar-scheduling-wzeg.onrender.com)
+- **Backend API:** [https://voice-powered-google-calendar-scheduling.onrender.com](https://voice-powered-google-calendar-scheduling.onrender.com) — used by the frontend; `API_URL` in `frontend/app.js` points here.
 
 ### How to test the agent
 
