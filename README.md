@@ -104,10 +104,29 @@ The app works end-to-end: you speak to schedule a meeting, and the event appears
 
 ## Logs and demo video
 
-- **Logs:** With the backend running locally, watch the terminal for `POST /api/chat`, `SCHEDULE block extracted`, and `Calendar event created successfully` to confirm an event was created.
-- **Demo video:** Record a short [Loom](https://www.loom.com) (or similar) walkthrough: open app → say name → "How can I help you?" → schedule a meeting or add an event → confirm → show the event in Google Calendar. Paste the link here:
+With the backend running locally, watch the terminal for `POST /api/chat`, `SCHEDULE block extracted`, and `Calendar event created successfully` to confirm an event was created.
 
-  **Demo video:** [Add your Loom link here]
+### Backend logs for event creation
+
+When the user schedules a meeting (e.g. "Interview on February 22 from 12 PM for 2 hours"), the backend logs look like this:
+
+```
+2026-02-21 00:26:34 [INFO] server: POST /api/chat received, message_count=11
+2026-02-21 00:26:34 [INFO] server: Calling Anthropic API: model=claude-haiku-4-5-20251001, message_count=11
+2026-02-21 00:26:35 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-02-21 00:26:35 [INFO] server: Anthropic response: input_tokens=1259, output_tokens=37, response_length=113
+2026-02-21 00:26:46 [INFO] server: POST /api/chat received, message_count=13
+2026-02-21 00:26:46 [INFO] server: Calling Anthropic API: model=claude-haiku-4-5-20251001, message_count=13
+2026-02-21 00:26:47 [INFO] server: Anthropic response: input_tokens=1302, output_tokens=55, response_length=149
+2026-02-21 00:26:47 [INFO] server: SCHEDULE block extracted (meeting): name='John', datetime='2026-02-22T12:00:00', title='Interview', duration_minutes=120
+2026-02-21 00:26:47 [INFO] calendar_service: create_event (timed) called: summary='Interview', start_datetime_str='2026-02-22T12:00:00', duration_minutes=120, timezone=America/Phoenix
+2026-02-21 00:26:47 [INFO] calendar_service: Loading Google credentials from credentials.json
+2026-02-21 00:26:48 [INFO] calendar_service: Calendar event created successfully: https://www.google.com/calendar/event?eid=...
+2026-02-21 00:26:48 [INFO] server: POST /api/chat returning with event_created=true, event_link=https://www.google.com/calendar/event?eid=...
+INFO:     127.0.0.1:57231 - "POST /api/chat HTTP/1.1" 200 OK
+```
+
+
 
 ---
 
